@@ -7,6 +7,16 @@
 <meta name="description" content="About Joe Suri, founder of Joebin Ventures. Co-Founder of ClearPath USA and Director of Business Development at Square Parking.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://joebinventures.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Joebin Ventures">
+<meta property="og:title" content="About Joe Suri | Joebin Ventures">
+<meta property="og:description" content="Founder, operator and dealmaker. Co-Founder of ClearPath USA and Director of Business Development at Square Parking.">
+<meta property="og:url" content="https://joebinventures.com/about.html">
+<meta property="og:image" content="https://joebinventures.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Joe Suri","url":"https://joebinventures.com/","email":"mailto:suri@joebinventures.com","jobTitle":"Founder","worksFor":[{"@type":"Organization","name":"Joebin Ventures","url":"https://joebinventures.com/"},{"@type":"Organization","name":"ClearPath USA","url":"https://clearpathusa.io"},{"@type":"Organization","name":"Square Parking"}],"alumniOf":"Boise State University"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
@@ -27,7 +37,9 @@
       <a href="./" class="btn btn-light">Home</a>
       <a href="#contact" class="btn btn-dark">Get in touch</a>
     </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
+  <nav class="mnav"><a href="./#ventures">Ventures</a><a href="./#pipeline">Pipeline</a><a href="./#work">How I help</a><a href="about.html">About</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main class="frame">
@@ -101,7 +113,7 @@
     <h2 class="h2">Let's talk.</h2>
     <p class="sub" style="margin-left:auto;margin-right:auto">Partnerships, advisory or a new idea. I'm always open to a good conversation.</p>
     <div class="cta"><a href="mailto:suri@joebinventures.com" class="btn btn-dark btn-lg">Email Joe</a></div>
-    <div class="email">suri@joebinventures.com</div>
+    <div class="email"><span>suri@joebinventures.com</span><button class="copy" data-copy="suri@joebinventures.com">Copy</button></div>
   </section>
 
 </main>
@@ -116,6 +128,14 @@
   <div class="legal"><span>&copy; <span id="yr">2026</span> Joebin Ventures</span><span>joebinventures.com</span></div>
 </footer>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var h=document.querySelector('header'),mb=document.getElementById('menuBtn');
+mb.addEventListener('click',function(){var o=h.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');
+ var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+ if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}});});
+</script>
 </body>
 </html>
