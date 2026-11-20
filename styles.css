@@ -274,3 +274,20 @@ form.cf{border:1px solid var(--line);border-radius:12px;padding:24px;background:
   .cf .two{grid-template-columns:1fr}
   form.cf{padding:18px}
 }
+
+/* LinkedIn icon button, logos, testimonial */
+.icon-btn{width:38px;height:38px;border:1px solid var(--line2);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:#0a66c2;background:#fff}
+.icon-btn svg{width:17px;height:17px}
+.icon-btn:hover{border-color:#c4c5cb}
+img.ico.logo{object-fit:contain;background:none;padding:0}
+a.way:hover{border-color:var(--line2)}
+.way svg[fill="currentColor"]{width:18px;height:18px}
+.btn svg{flex:none}
+.quote{text-align:center;max-width:760px}
+.quote .qm{width:34px;height:26px;color:var(--line2)}
+.quote blockquote{font-family:var(--display);font-size:clamp(26px,3.6vw,40px);font-weight:600;letter-spacing:-.035em;line-height:1.15;margin-top:22px;text-wrap:balance}
+.quote .who{display:inline-flex;align-items:center;gap:12px;margin-top:28px;text-align:left}
+.quote .who .ico{width:36px;height:36px;border-radius:50%;font-size:13px}
+.quote .who strong{display:block;font-size:14.5px;font-weight:600}
+.quote .who small{display:block;font-size:13px;color:var(--muted)}
+@media (max-width:640px){.navcta .icon-btn{display:none}}
