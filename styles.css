@@ -212,3 +212,65 @@ header.open .mnav{display:block}
 .nf{text-align:center;padding-top:140px;padding-bottom:140px}
 .nf .code{font-family:var(--display);font-size:13px;color:var(--faint);letter-spacing:.2em}
 @media (max-width:640px){.announce{height:auto;border-radius:12px;padding:6px 10px 6px 6px;text-align:left;font-size:12.5px;line-height:1.4}.hero{padding-top:56px}}
+
+/* Outcome block on venture cards */
+.out{padding:16px 16px 14px;border-bottom:1px solid var(--line)}
+.out b{display:block;font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:-.035em;line-height:1.1;font-variant-numeric:tabular-nums}
+.out span{display:block;font-size:13.5px;color:var(--body);margin-top:6px;line-height:1.45}
+.out ul{list-style:none;display:grid;gap:7px;margin-top:2px}
+.out li{display:grid;grid-template-columns:16px 1fr;gap:6px;font-size:13.5px;color:var(--body);line-height:1.45}
+.out li::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--green);margin-top:6px}
+.records{align-items:start}
+
+/* Why Joe */
+.why{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.why div{padding:26px 24px;border-left:1px solid var(--line)}
+.why div:first-child{border-left:0}
+.why .k{font-family:var(--display);font-size:13px;font-weight:600;color:var(--faint);font-variant-numeric:tabular-nums}
+.why h3{font-size:17px;font-weight:600;letter-spacing:-.015em;margin-top:14px}
+.why p{font-size:14px;color:var(--muted);margin-top:6px}
+.path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:12.5px;color:var(--body)}
+.path i{font-style:normal;color:var(--faint)}
+
+/* Process */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.step{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:var(--soft)}
+.step .n{font-size:12px;font-weight:600;color:var(--faint);font-variant-numeric:tabular-nums}
+.step h4{font-size:15px;font-weight:600;margin-top:10px}
+.step p{font-size:13.5px;color:var(--muted);margin-top:4px}
+.engage{margin-top:14px;font-size:14px;color:var(--muted)}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;text-align:left}
+.contact-grid .h2{margin-left:0}
+.ways{margin-top:28px;display:grid;gap:10px}
+.way{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r);background:#fff;font-size:14px}
+.way svg{width:18px;height:18px;flex:none;color:var(--text)}
+.way small{display:block;color:var(--faint);font-size:12px}
+.way .copy{margin-left:auto}
+form.cf{border:1px solid var(--line);border-radius:12px;padding:24px;background:#fff;box-shadow:0 1px 2px rgba(16,17,20,.04),0 12px 32px rgba(16,17,20,.06);display:grid;gap:14px}
+.cf .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf label{display:grid;gap:6px;font-size:13px;font-weight:500;color:var(--body);min-width:0}
+.cf input,.cf select,.cf textarea{font:inherit;font-size:14.5px;color:var(--text);border:1px solid var(--line2);border-radius:8px;padding:10px 12px;background:#fff;width:100%}
+.cf textarea{min-height:120px;resize:vertical}
+.cf input:focus,.cf select:focus,.cf textarea:focus{outline:2px solid var(--blue);outline-offset:0;border-color:transparent}
+.cf .btn{justify-content:center;border:0;cursor:pointer;width:100%}
+.cf .fine{font-size:12.5px;color:var(--faint);text-align:center}
+.cf .err{font-size:13px;color:#b42318}
+.final.left{text-align:left}
+
+@media (max-width:960px){
+  .why{grid-template-columns:1fr 1fr}
+  .why div:nth-child(3){border-left:0}
+  .why div:nth-child(n+3){border-top:1px solid var(--line)}
+  .process{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:640px){
+  .why{grid-template-columns:1fr}
+  .why div{border-left:0;border-top:1px solid var(--line)}
+  .why div:first-child{border-top:0}
+  .process{grid-template-columns:1fr}
+  .cf .two{grid-template-columns:1fr}
+  form.cf{padding:18px}
+}
