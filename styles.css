@@ -235,7 +235,8 @@ footer{border-top:1px solid var(--line)}
 .view[hidden]{display:none}
 .cover{min-height:calc(100vh - 65px);min-height:calc(100svh - 65px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .cover h1{font-size:var(--t-2xl);font-weight:600;letter-spacing:-.04em;line-height:1.04;margin-top:24px;max-width:880px}
-.cover h1 span{color:var(--faint)}
+.cover h1 > .w{color:var(--text)}
+.cover h1 .faint,.cover h1 .faint .w{color:var(--faint)}
 .cover > p{font-size:var(--t-md);color:var(--muted);max-width:580px;margin-top:20px;line-height:1.55}
 .cover .cta{justify-content:center}
 .cover-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:56px}
@@ -245,3 +246,36 @@ footer{border-top:1px solid var(--line)}
 .mnav a.on{font-weight:600}
 body.is-home footer{display:none}
 .view .records{margin-top:40px}
+
+/* Cover entrance animation */
+.cover{position:relative;overflow:hidden;isolation:isolate}
+.cover > *:not(.glow){position:relative;z-index:1}
+.cover h1 .faint{color:var(--faint)}
+.cover h1 .w{display:inline-block;animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.25s + var(--i) * .08s)}
+.pop{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.15s + var(--d) * .07s)}
+@keyframes rise{from{opacity:0;transform:translateY(.45em);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+
+/* Soft drifting glow and dot grid behind the cover */
+.glow{position:absolute;inset:0;z-index:0;pointer-events:none;animation:fadein 1.6s ease both}
+.glow::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line2) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 45%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 55% at 50% 45%,#000 0%,transparent 75%);opacity:.7}
+.glow i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55}
+.glow i:nth-child(1){width:420px;height:420px;left:12%;top:14%;background:#dbe5ff;animation:drift1 16s ease-in-out infinite alternate}
+.glow i:nth-child(2){width:380px;height:380px;right:10%;top:30%;background:#f6e9d4;animation:drift2 18s ease-in-out infinite alternate}
+.glow i:nth-child(3){width:300px;height:300px;left:40%;bottom:6%;background:#e3f3ea;animation:drift3 20s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(80px,40px) scale(1.1)}}
+@keyframes drift2{to{transform:translate(-70px,-50px) scale(1.15)}}
+@keyframes drift3{to{transform:translate(40px,-60px) scale(.9)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+
+/* Buttons and tabs lift slightly on hover */
+.cover .btn{transition:transform .2s,box-shadow .2s,background .15s,border-color .15s}
+.cover .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,17,20,.12)}
+.cover-tabs a{transition:transform .2s,border-color .15s,color .15s}
+.cover-tabs a:hover{transform:translateY(-2px)}
+
+/* Each tab fades in when opened */
+.view:not([hidden]):not([data-view="home"]){animation:viewin .45s ease both}
+@keyframes viewin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+@media (max-width:640px){.glow i{filter:blur(44px)}.glow i:nth-child(1){width:260px;height:260px}.glow i:nth-child(2){width:240px;height:240px}.glow i:nth-child(3){width:220px;height:220px}}
+@media (prefers-reduced-motion:reduce){.cover h1 .w,.pop,.glow,.glow i,.view{animation:none!important}}
