@@ -230,3 +230,18 @@ footer{border-top:1px solid var(--line)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .grid4.tight{margin-top:16px}
+
+/* Cover and tabbed views */
+.view[hidden]{display:none}
+.cover{min-height:calc(100vh - 65px);min-height:calc(100svh - 65px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cover h1{font-size:var(--t-2xl);font-weight:600;letter-spacing:-.04em;line-height:1.04;margin-top:24px;max-width:880px}
+.cover h1 span{color:var(--faint)}
+.cover > p{font-size:var(--t-md);color:var(--muted);max-width:580px;margin-top:20px;line-height:1.55}
+.cover .cta{justify-content:center}
+.cover-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:56px}
+.cover-tabs a{font-size:var(--t-sm);color:var(--muted);padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;transition:border-color .15s,color .15s}
+.cover-tabs a:hover{color:var(--text);border-color:var(--line2)}
+.links a.on{color:var(--text);font-weight:500}
+.mnav a.on{font-weight:600}
+body.is-home footer{display:none}
+.view .records{margin-top:40px}

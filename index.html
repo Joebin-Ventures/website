@@ -26,13 +26,13 @@
 
 <header>
   <div class="nav">
-    <a href="./" class="brand"><img src="jv-mark.svg" alt=""><span>Joebin <em>Ventures</em></span></a>
+    <a href="#" class="brand" data-home><img src="jv-mark.svg" alt=""><span>Joebin <em>Ventures</em></span></a>
     <ul class="links">
-      <li><a href="#ventures">Ventures</a></li>
-      <li><a href="#why">Why Joe</a></li>
-      <li><a href="#pipeline">Pipeline</a></li>
-      <li><a href="#work">How I help</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="#ventures" data-tab="ventures">Ventures</a></li>
+      <li><a href="#why" data-tab="why">Why Joe</a></li>
+      <li><a href="#work" data-tab="work">How I help</a></li>
+      <li><a href="#about" data-tab="about">About</a></li>
+      <li><a href="#contact" data-tab="contact">Contact</a></li>
     </ul>
     <div class="navcta">
       <a href="https://www.linkedin.com/in/joe-suri/" class="icon-btn" target="_blank" rel="noopener" aria-label="Joe Suri on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
@@ -40,20 +40,30 @@
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <nav class="mnav"><a href="#ventures">Ventures</a><a href="#why">Why Joe</a><a href="#pipeline">Pipeline</a><a href="#work">How I help</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/joe-suri/" target="_blank" rel="noopener">LinkedIn</a></nav>
+  <nav class="mnav"><a href="#ventures" data-tab="ventures">Ventures</a><a href="#why" data-tab="why">Why Joe</a><a href="#work" data-tab="work">How I help</a><a href="#about" data-tab="about">About</a><a href="#contact" data-tab="contact">Contact</a><a href="https://www.linkedin.com/in/joe-suri/" target="_blank" rel="noopener">LinkedIn</a></nav>
 </header>
 
 <main class="frame">
-
-  <section class="pad hero" id="ventures">
+<div class="view" data-view="home">
+  <section class="pad cover">
     <a href="https://parkequityusa.com" target="_blank" rel="noopener" class="announce"><b>New</b>Now Associate Partner at Park Equity</a>
     <h1>Building companies <span>across education and mobility.</span></h1>
     <p>Joebin Ventures is the home of my work as a founder, operator and partner. Two industries, one focus: real results for the people I work with.</p>
     <div class="cta">
-      <a href="mailto:suri@joebinventures.com?subject=Booking%20a%20conversation" class="btn btn-dark btn-lg">Book a conversation</a>
-      <a href="about.html" class="btn btn-light btn-lg">Read my story</a>
+      <a href="#ventures" class="btn btn-dark btn-lg">Explore my ventures</a>
+      <a href="#contact" class="btn btn-light btn-lg">Book a conversation</a>
     </div>
-
+    <nav class="cover-tabs" aria-label="Sections">
+      <a href="#ventures">Ventures</a><a href="#why">Why Joe</a><a href="#work">How I help</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </section>
+</div>
+<div class="view" data-view="ventures" hidden>
+  <section class="pad">
+    <div class="inner">
+      <span class="eyebrow">Ventures</span>
+      <h1 class="h2">Companies I build, <span>grow and invest in.</span></h1>
+    </div>
     <div class="records inner">
       <a class="rec" href="https://clearpathusa.io" target="_blank" rel="noopener">
         <div class="rec-h"><span class="logo-box"><img src="logos/clearpath.png" alt="ClearPath USA logo"></span><div class="rec-t"><strong>ClearPath USA</strong><small>Co-Founder</small></div></div>
@@ -93,29 +103,7 @@
       </div>
     </div>
   </section>
-
-  <section class="band pad" id="why">
-    <div class="inner">
-      <span class="eyebrow">Why Joe</span>
-      <h2 class="h2">Parking and EdTech rarely meet. <span>I've built in both.</span></h2>
-      <p class="sub">Most people in parking have never built an EdTech company, and most EdTech founders have never closed a parking deal. That overlap is where I add value.</p>
-      <div class="grid4">
-        <div class="cell"><span class="k">01</span><h3>Selling since 14</h3><p>Started on the sales floor at Rip Curl and have been selling and leading ever since.</p></div>
-        <div class="cell"><span class="k">02</span><h3>Deep in parking and mobility</h3><p>From technology to operations to investment.</p><div class="path">SKIDATA <i>&rarr;</i> NextGen <i>&rarr;</i> Square Parking <i>&rarr;</i> Park Equity</div></div>
-        <div class="cell"><span class="k">03</span><h3>Building in EdTech</h3><p>Co-founded ClearPath USA to help international students land well in the United States.</p></div>
-        <div class="cell"><span class="k">04</span><h3>UK and US perspective</h3><p>Originally from England, built my career in America. I know what it takes to start over.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band pad" id="testimonial">
-    <div class="inner quote">
-      <blockquote>Joe has been an invaluable addition to my team.</blockquote>
-      <div class="who"><span class="av">BH</span><div><strong>Brett Harwood</strong><small>Principal, Park Equity</small></div></div>
-    </div>
-  </section>
-
-  <section class="band pad" id="pipeline">
+  <section class="band pad">
     <div class="inner feat">
       <div>
         <span class="eyebrow">Pipeline</span>
@@ -148,8 +136,30 @@
       </div>
     </div>
   </section>
-
-  <section class="band pad" id="work">
+</div>
+<div class="view" data-view="why" hidden>
+  <section class="pad">
+    <div class="inner">
+      <span class="eyebrow">Why Joe</span>
+      <h2 class="h2">Parking and EdTech rarely meet. <span>I've built in both.</span></h2>
+      <p class="sub">Most people in parking have never built an EdTech company, and most EdTech founders have never closed a parking deal. That overlap is where I add value.</p>
+      <div class="grid4">
+        <div class="cell"><span class="k">01</span><h3>Selling since 14</h3><p>Started on the sales floor at Rip Curl and have been selling and leading ever since.</p></div>
+        <div class="cell"><span class="k">02</span><h3>Deep in parking and mobility</h3><p>From technology to operations to investment.</p><div class="path">SKIDATA <i>&rarr;</i> NextGen <i>&rarr;</i> Square Parking <i>&rarr;</i> Park Equity</div></div>
+        <div class="cell"><span class="k">03</span><h3>Building in EdTech</h3><p>Co-founded ClearPath USA to help international students land well in the United States.</p></div>
+        <div class="cell"><span class="k">04</span><h3>UK and US perspective</h3><p>Originally from England, built my career in America. I know what it takes to start over.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="band pad">
+    <div class="inner quote">
+      <blockquote>Joe has been an invaluable addition to my team.</blockquote>
+      <div class="who"><span class="av">BH</span><div><strong>Brett Harwood</strong><small>Principal, Park Equity</small></div></div>
+    </div>
+  </section>
+</div>
+<div class="view" data-view="work" hidden>
+  <section class="pad">
     <div class="inner">
       <span class="eyebrow">How I help</span>
       <h2 class="h2">Practical work that <span>moves the numbers.</span></h2>
@@ -168,20 +178,62 @@
       <p class="note">Engagements can be advisory or project based, depending on what you need.</p>
     </div>
   </section>
-
-  <section class="band pad">
+</div>
+<div class="view" data-view="about" hidden>
+  <section class="pad">
     <div class="inner profile">
       <div class="photo"><img src="joe-suri.jpg" alt="Joe Suri"></div>
       <div>
         <span class="eyebrow">About</span>
-        <h2 class="h2">Hi, I'm Joe.</h2>
-        <p>I've been selling since I was fourteen. I spent years in parking and mobility, from SKIDATA to founding NextGen Mobility Reps to Square Parking and Park Equity. Now I'm also building in EdTech with ClearPath USA.</p>
-        <p>Originally from England and based in New Jersey, I bring a UK and US perspective to every deal and partnership.</p>
-        <div class="cta"><a href="about.html" class="btn btn-dark">Read my story</a><a href="https://www.linkedin.com/in/joe-suri/" target="_blank" rel="noopener" class="btn btn-light">LinkedIn</a></div>
+        <h1 class="h2">Joe Suri</h1>
+        <p>Founder, operator and dealmaker. I've been selling since I was fourteen, and I've spent most of my career inside parking and mobility: SKIDATA, then founding NextGen Mobility Reps, and today Square Parking and Park Equity.</p>
+        <p>Now I'm also building in EdTech. I co-founded ClearPath USA, which has served more than 50 international students and partners with Rutgers Camden.</p>
+        <p>Originally from England and based in New Jersey, I know what it takes to start over somewhere new. That UK and US perspective shapes how I build, sell and partner.</p>
+        <div class="chips">
+          <span>Co-Founder, ClearPath USA</span><span>Associate Partner, Park Equity</span><span>Business Development, Square Parking</span><span>Marketing &amp; Sales, Pi Alley Garage</span>
+        </div>
+        <div class="cta"><a href="mailto:suri@joebinventures.com" class="btn btn-dark">Email Joe</a><a href="https://www.linkedin.com/in/joe-suri/" class="btn btn-light" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></div>
       </div>
     </div>
   </section>
-
+  <section class="band pad">
+    <div class="inner">
+      <span class="eyebrow">Recognition</span>
+      <h2 class="h2">Leadership, <span>early and often.</span></h2>
+      <div class="grid3">
+        <div class="cell award">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.8 7 22l5-3 5 3-1.5-8.2"/></svg></span>
+          <h3>City Recognition Award</h3><small>City of Lake Forest</small>
+          <p>Honored by the city for my work as Student Council Liaison, connecting students with local leadership.</p>
+        </div>
+        <div class="cell award">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+          <h3>Grand Council Citation</h3><small>Sigma Chi Fraternity</small>
+          <p>Awarded by Sigma Chi's Grand Council in recognition of outstanding service.</p>
+        </div>
+        <div class="cell award">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m2 9 10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></span>
+          <h3>Dean's List</h3><small>Boise State University</small>
+          <p>Double major in Business Entrepreneurship and Business Administration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band pad">
+    <div class="inner">
+      <span class="eyebrow">Journey</span>
+      <h2 class="h2">From the sales floor <span>to building companies.</span></h2>
+      <div class="table">
+        <div class="tr th"><span>When</span><span>Where</span><span>What</span></div>
+        <div class="tr"><span class="when">Age 14</span><strong>Rip Curl</strong><p>Started in clothing sales and learned the fundamentals: read people, solve their problem, close.</p></div>
+        <div class="tr"><span class="when">High school</span><strong>Student Council Liaison</strong><p>Represented the student body and was recognized by the City of Lake Forest.</p></div>
+        <div class="tr"><span class="when">University</span><strong>Boise State &amp; Sigma Chi</strong><p>Dean's List with a double major, and a Grand Council Citation for service.</p></div>
+        <div class="tr"><span class="when">Industry</span><strong>SKIDATA</strong><p>Built a foundation in parking and access technology with a global industry leader.</p></div>
+        <div class="tr"><span class="when">Founder</span><strong>NextGen Mobility Reps</strong><p>Founded a representation business connecting mobility technology with operators.</p></div>
+        <div class="tr"><span class="when">Today</span><strong>Joebin Ventures</strong><p>Co-Founder of ClearPath USA (50+ students served, Rutgers Camden partnership), Associate Partner at Park Equity, Director of Business Development at Square Parking, marketing and sales for Pi Alley Garage in Boston, and business development for Linksman Studios.</p></div>
+      </div>
+    </div>
+  </section>
   <section class="band">
     <div class="stats">
       <div class="stat"><b>50+</b><span>Students served by ClearPath USA</span></div>
@@ -190,8 +242,17 @@
       <div class="stat"><b>14</b><span>Age I started working</span></div>
     </div>
   </section>
-
-  <section class="band pad" id="contact">
+  <section class="band pad">
+    <div class="inner">
+      <span class="eyebrow">Beyond business</span>
+      <h2 class="h2">Always pushing.</h2>
+      <p class="sub">I believe in pushing myself physically and mentally. Running marathons and staying disciplined keep me sharp, and that same mindset shows up in everything I build.</p>
+      <div class="chips"><span>Marathon runner</span><span>Golf</span><span>Tennis</span><span>Arsenal supporter</span></div>
+    </div>
+  </section>
+</div>
+<div class="view" data-view="contact" hidden>
+  <section class="pad">
     <div class="inner contact-grid">
       <div>
         <span class="eyebrow">Contact</span>
@@ -218,14 +279,14 @@
       </form>
     </div>
   </section>
-
+</div>
 </main>
 
 <footer>
   <div class="foot">
     <div><a href="./" class="brand"><img src="jv-mark.svg" alt=""><span>Joebin <em>Ventures</em></span></a><p>Building, growing and advising companies across education technology and mobility.</p></div>
-    <div><h5>Ventures</h5><ul><li><a href="https://clearpathusa.io" target="_blank" rel="noopener">ClearPath USA</a></li><li><a href="#ventures">Square Parking</a></li><li><a href="https://parkequityusa.com" target="_blank" rel="noopener">Park Equity</a></li><li><a href="#pipeline">Linksman Studios</a></li></ul></div>
-    <div><h5>Joebin</h5><ul><li><a href="about.html">About</a></li><li><a href="#pipeline">Pipeline</a></li><li><a href="#work">How I help</a></li></ul></div>
+    <div><h5>Ventures</h5><ul><li><a href="https://clearpathusa.io" target="_blank" rel="noopener">ClearPath USA</a></li><li><a href="#ventures">Square Parking</a></li><li><a href="https://parkequityusa.com" target="_blank" rel="noopener">Park Equity</a></li><li><a href="#ventures">Linksman Studios</a></li></ul></div>
+    <div><h5>Joebin</h5><ul><li><a href="#about">About</a></li><li><a href="#ventures">Ventures</a></li><li><a href="#why">Why Joe</a></li><li><a href="#work">How I help</a></li><li><a href="#contact">Contact</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="mailto:suri@joebinventures.com">suri@joebinventures.com</a></li><li><a href="https://www.linkedin.com/in/joe-suri/" target="_blank" rel="noopener">LinkedIn</a></li><li>New Jersey, USA</li></ul></div>
   </div>
   <div class="legal"><span>&copy; <span id="yr">2026</span> Joebin Ventures</span><span>joebinventures.com</span></div>
@@ -233,6 +294,17 @@
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
+var views=document.querySelectorAll('.view'),tabsEls=document.querySelectorAll('[data-tab]');
+var names=[].map.call(views,function(v){return v.getAttribute('data-view')});
+function route(){var k=(location.hash||'').replace('#','');if(names.indexOf(k)<0)k='home';
+ views.forEach(function(v){v.hidden=v.getAttribute('data-view')!==k});
+ tabsEls.forEach(function(a){var on=a.getAttribute('data-tab')===k;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+ document.body.classList.toggle('is-home',k==='home');
+ document.title=k==='home'?'Joebin Ventures':({ventures:'Ventures',why:'Why Joe',work:'How I help',about:'About Joe Suri',contact:'Contact'}[k]+' | Joebin Ventures');
+ window.scrollTo(0,0);}
+window.addEventListener('hashchange',route);route();
+document.querySelector('[data-home]').addEventListener('click',function(e){e.preventDefault();history.pushState('',document.title,location.pathname);route();});
+
 var h=document.querySelector('header'),mb=document.getElementById('menuBtn');
 mb.addEventListener('click',function(){var o=h.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
 document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});
